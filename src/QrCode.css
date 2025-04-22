@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #4361ee;
+  --primary-hover: #3a56d4;
+  --secondary: #4cc9f0;
+  --background: #f8f9fa;
+  --card: #ffffff;
+  --text: #2b2d42;
+  --text-light: #8d99ae;
+  --border: #e9ecef;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--background);
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+h1 {
+  color: var(--text);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-light);
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.qr-code-image {
+  width: 100%;
+  max-width: 200px;
+  margin: 1rem auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  display: none;
+}
+
+.qr-code-image[src] {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.input-label {
+  display: block;
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.button-group {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+button {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.primary-button {
+  background-color: var(--primary);
+  color: white;
+}
+
+.primary-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.primary-button:disabled {
+  background-color: #a5b4fc;
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  background-color: white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.secondary-button:hover {
+  background-color: #f0f4ff;
+}
+
+.secondary-button:disabled {
+  color: #a5b4fc;
+  border-color: #a5b4fc;
+  cursor: not-allowed;
+  background-color: white;
+}
